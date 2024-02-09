@@ -22,6 +22,7 @@ export class ProductService {
     });
   }
 
+  // interacao no backend por meio do post
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product).pipe(
       map((obj) => obj),
